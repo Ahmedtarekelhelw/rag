@@ -8,21 +8,27 @@ This is a minimal implementation of the RAG model for question answering.
 
 ### Install Python using MiniConda
 
-1) Download and install MiniConda from [here](https://www.anaconda.com/download/success?reg=skipped-miniconda)
-2) Create a new environment using the following command:
+1. Download and install MiniConda from [here](https://www.anaconda.com/download/success?reg=skipped-miniconda)
+2. Create a new environment using the following command:
+
 ```bash
 $ conda create -n mini-rag python=3.8
 ```
-3) Activate the environment:
+
+3. Activate the environment:
+
 ```bash
 $ conda activate mini-rag
 ```
-4) Install pip:
+
+4. Install pip:
+
 ```bash
 $ conda install pip
 ```
 
 ### (Optional) Setup you command line interface for better readability
+
 ```bash
 export PS1="\[\033[01;32m\]\u@\h:\w\n\[\033[00m\]\$ "
 ```
@@ -42,3 +48,13 @@ $ cp .env.example .env
 ```
 
 Set your environment variables in the `.env` file. Like `OPENAI_API_KEY` value.
+
+## Run the FastAPI server
+
+```bash
+$ uvicorn main:app --reload --host 0.0.0.0 --port 5000
+```
+
+## POSTMAN Collection
+
+Download the POSTMAN collection from [/assets/mini-rag-app.postman_collection.json](/assets/mini-rag-app.postman_collection.json)
